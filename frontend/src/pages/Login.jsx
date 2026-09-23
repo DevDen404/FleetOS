@@ -16,6 +16,7 @@ function Login() {
     event.preventDefault();
     const selected = personas.find((item) => item.id === persona);
     localStorage.setItem("fleetos-session", JSON.stringify({ role: selected.id, name: selected.id === "driver" ? "Ravi Sharma" : "Sushant" }));
+    sessionStorage.removeItem("fleetos-insights-seen");
     navigate("/dashboard", { replace: true });
   }
 

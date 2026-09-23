@@ -62,6 +62,603 @@
 			],
 			"isBackground": false,
 			"problemMatcher": []
+		},
+		{
+			"label": "Validate FleetOS frontend",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate FleetOS API",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"FleetOS.Api\\FleetOS.Api.csproj",
+				"--no-restore"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint delete trip changes",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint sidebar navigation",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Live Fleet fix",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Live Fleet fix",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Live Fleet navigation",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot trip wizard",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot trip wizard",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Recheck Copilot trip wizard",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Final Copilot trip wizard lint",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint trip authorization",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build trip authorization",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint authorization buttons",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build authorization buttons",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Copilot auto scroll",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot auto scroll",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot layout",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot layout",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot composer position",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot panel spacing",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot panel spacing",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint live quick prompts",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build live quick prompts",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot quick prompts",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot quick prompts",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint schema locked form builder",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build schema locked form builder",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint schema field dropdown",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build schema field dropdown",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint protected default version",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot status dropdown",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot status dropdown",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint sidebar auth",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build sidebar auth",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint sidebar footer",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build sidebar footer",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot status insights",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot status insights",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Final Copilot status insights lint",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint notification insights",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build notification insights",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot access control",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot access control",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Copilot permissions",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"lint"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Copilot permissions",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
 		}
 	]
 }

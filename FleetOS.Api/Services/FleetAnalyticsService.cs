@@ -110,6 +110,12 @@ public class FleetAnalyticsService
         return trip;
     }
 
+    public bool DeleteTrip(string id)
+    {
+        var trip = _trips.FirstOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase));
+        return trip is not null && _trips.Remove(trip);
+    }
+
     public FleetMaintenanceItem CreateMaintenanceItem(CreateMaintenanceRequest request)
     {
         var item = new FleetMaintenanceItem(

@@ -21,10 +21,18 @@ function LiveFleet() {
   const [feedActive, setFeedActive] = useState(true);
 
   useEffect(() => {
-    const localTrips = JSON.parse(localStorage.getItem("fleetos-copilot-trips") || "[]");
+    let localTrips = [];
+    try {
+      const storedTrips = JSON.parse(localStorage.getItem("fleetos-copilot-trips") || "[]");
+      localTrips = Array.isArray(storedTrips) ? storedTrips : [];
+    } catch {
+      localTrips = [];
+    }
+
     const applyTrips = (loadedVehicles) => {
+      const safeVehicles = Array.isArray(loadedVehicles) ? loadedVehicles : fallbackVehicles;
       const activeTrips = localTrips.filter((item) => item.status !== "Completed");
-      const updatedVehicles = loadedVehicles.map((vehicle) => {
+      const updatedVehicles = safeVehicles.map((vehicle) => {
         const trip = activeTrips.find((item) => item.vehicleId === vehicle.id);
         return trip ? { ...vehicle, status: "On trip", driver: trip.driver || vehicle.driver, routeOrigin: trip.origin, routeDestination: trip.destination } : vehicle;
       });
@@ -44,7 +52,13 @@ function LiveFleet() {
       }));
       return [...updatedVehicles, ...missingVehicles];
     };
-    fetch("http://127.0.0.1:5087/api/vehicles").then((response) => response.json()).then((loadedVehicles) => setVehicles(applyTrips(loadedVehicles))).catch(() => setVehicles(applyTrips(fallbackVehicles)));
+    fetch("http://127.0.0.1:5087/api/vehicles")
+      .then((response) => {
+        if (!response.ok) throw new Error("Unable to load vehicles");
+        return response.json();
+      })
+      .then((loadedVehicles) => setVehicles(applyTrips(loadedVehicles)))
+      .catch(() => setVehicles(applyTrips(fallbackVehicles)));
 
     const handleTripCreated = (event) => {
       const trip = event.detail;

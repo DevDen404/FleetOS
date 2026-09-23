@@ -72,6 +72,11 @@ public class Program
             return Results.Ok(trip);
         });
 
+        app.MapDelete("/api/trips/{id}", (string id, FleetAnalyticsService service) =>
+        {
+            return service.DeleteTrip(id) ? Results.NoContent() : Results.NotFound(new { error = "Trip not found." });
+        });
+
         app.MapPost("/api/maintenance", (CreateMaintenanceRequest request, FleetAnalyticsService service) =>
         {
             if (string.IsNullOrWhiteSpace(request.VehicleId) || string.IsNullOrWhiteSpace(request.Title))
